@@ -54,7 +54,8 @@ representation of a decentralized and democratic organization on the blockchain.
 real organization, the DAO has a CEO that decides on membership and voting rules.
 
 A DAO can take many forms as [detailed in the docs](https://www.ethereum.org/dao). The
-[example dao.sol in this repository](https://github.com/deadlysyn/ethereum-experiment/blob/master/dao.sol) implements the "shareholder association" contract,
+example [dao.sol](https://github.com/deadlysyn/ethereum-experiment/blob/master/dao.sol)
+in this repository implements the "shareholder association" contract,
 which mimics a typical shareholder organization with your tokens as shares.
 
 As usual, deploy the contract via the wallet app... you'll need to customize a few things:

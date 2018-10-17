@@ -27,13 +27,13 @@ you will loose your funds!
 
 # Token
 
-[ERC20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) (Ethereum Request for
+[ERC-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) (Ethereum Request for
 Comment #20) is more about standardization than security. As an emerging standard, it documents
 the required API for tokens. With everyone creating custom tokens, this helps ensure
 compatability and makes exchange easier.
 
-For an [ERC20 compliant token](https://theethereum.wiki/w/index.php/ERC20_Token_Standard),
-you can just use [token.sol]() in this repository as a starting point. Deploy it with
+For an [ERC-20 compliant token](https://theethereum.wiki/w/index.php/ERC20_Token_Standard),
+you can just use [token.sol](https://github.com/deadlysyn/ethereum-experiment/blob/master/token.sol) in this repository as a starting point. Deploy it with
 the wallet app (Deploy New Contract, paste Solidity code). [Detailed directions](https://www.ethereum.org/token)
 are in the docs. When you deploy the token contract you have to specify the following:
 
@@ -42,10 +42,10 @@ are in the docs. When you deploy the token contract you have to specify the foll
 - Decimal units: 18 is a common default
 - Token symbol: A symbol for your token
 
-Note: "Know Your Customer" is not addressed by ERC20. You should discuss this with an advisor.
-There are other token "standards" like [ST20](https://polymath.network/st20.html) which attempt to
+Note: "Know Your Customer" is not addressed by ERC-20. You should discuss this with an advisor.
+There are other token "standards" like [ST-20](https://polymath.network/st20.html) which attempt to
 solve the KYC problem. Unfortunately, [as this thread implies](https://www.reddit.com/r/ethereum/comments/7vkm3m/can_kyc_be_baked_into_security_tokens_on_ethereum),
-there are mixed opinions -- you will need an expert opinion on whether it is legally suitable.
+there are mixed views -- you will need an expert opinion on whether it is legally suitable.
 
 # DAO
 
@@ -54,7 +54,7 @@ representation of a decentralized and democratic organization on the blockchain.
 real organization, the DAO has a CEO that decides on membership and voting rules.
 
 A DAO can take many forms as [detailed in the docs](https://www.ethereum.org/dao). The
-[example dao.sol in this repository]() implements the "shareholder association" contract,
+[example dao.sol in this repository](https://github.com/deadlysyn/ethereum-experiment/blob/master/dao.sol) implements the "shareholder association" contract,
 which mimics a typical shareholder organization with your tokens as shares.
 
 As usual, deploy the contract via the wallet app... you'll need to customize a few things:
@@ -68,7 +68,7 @@ As usual, deploy the contract via the wallet app... you'll need to customize a f
 
 Once you've issued your token and deployed an organization, you need to attract investors
 and be able to trade virtual shares in your company. You do this in Ethereum with a crowdsale contract.
-You can use [crowdsale.sol]() in this repository as a starting point.
+You can use [crowdsale.sol](https://github.com/deadlysyn/ethereum-experiment/blob/master/crowdsale.sol) in this repository as a starting point.
 
 Once again, deploy the contract using the wallet app and customize the following:
 

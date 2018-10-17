@@ -7,7 +7,7 @@ Some of the things you will need include:
 
 - A **Wallet** to manage funds.
 - One or more **tokens**, if you don't intend to trade raw ether.
-- Decentralized Autonomous Organization (**DAO**)
+- A mysteriously named "Decentralized Autonomous Organization" (or **DAO**).
 - A **crowdsale** or **crowd equity**.
 
 # Wallet
@@ -17,19 +17,18 @@ You need a wallet to hold or transfer funds.  You can associate more than one ac
 with a single wallet.
 
 Just download and install the wallet app for your OS ([MacOS version here](https://github.com/ethereum/mist/releases/download/v0.11.1/Ethereum-Wallet-macosx-0-11-1.dmg)),
-add an account, and be sure to use a strong password you won't forget (this protects your money!).
+add an account, and **be sure to use a strong password you won't forget** (this protects your money!).
 
 Aside from managing funds, the wallet app also lets you deploy contracts. The official wallet
 app should be enough to get started, but is just one option. There are a number of
-[software/cloud and hardware based solutions](https://coinsutra.com/best-etherum-wallets/).
-Remember that if you loose your wallet or access to the computer it is on (or your account),
-you will loose your funds!
+[software and hardware based solutions](https://coinsutra.com/best-etherum-wallets).
+**Remember that if you loose your wallet or access to the computer it is on you will loose your funds!**
 
 # Token
 
 [ERC-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) (Ethereum Request for
-Comment #20) is more about standardization than security. As an emerging standard, it documents
-the required API for tokens. With everyone creating custom tokens, this helps ensure
+Comment #20) is more about [standardization](https://ethereum.stackexchange.com/questions/33956/are-there-any-other-smart-contract-standards-like-erc20) than security. As an emerging standard, it documents
+a proposed API for tokens. With everyone creating custom tokens, this helps ensure
 compatability and makes exchange easier.
 
 For an [ERC-20 compliant token](https://theethereum.wiki/w/index.php/ERC20_Token_Standard),
@@ -58,7 +57,7 @@ example [dao.sol](https://github.com/deadlysyn/ethereum-experiment/blob/master/d
 in this repository implements the "shareholder association" contract,
 which mimics a typical shareholder organization with your tokens as shares.
 
-As usual, deploy the contract via the wallet app... you'll need to customize a few things:
+Deploy the contract via the wallet app... you'll need to customize a few things:
 
 - Minimum quorum for proposals: Votes needed to execute a proposal
 - Minutes for debate: Amount of time that must pass before new proposal is executed
@@ -71,7 +70,7 @@ Once you've issued your token and deployed an organization, you need to attract 
 and be able to trade virtual shares in your company. You do this in Ethereum with a crowdsale contract.
 You can use [crowdsale.sol](https://github.com/deadlysyn/ethereum-experiment/blob/master/crowdsale.sol) in this repository as a starting point.
 
-Once again, deploy the contract using the wallet app and customize the following:
+Once again, deploy the contract using the wallet app and provide values for the following:
 
 - If successful send to: Address of your DAO
 - Funding goal in ethers: Amount to raise
@@ -90,7 +89,7 @@ Key concerns:
 
 The relative immaturity of the market along with rapidly evolving standards and legislation
 make KYC and other concerns specific to regulated commodities a moving target. More
-market research and expert opinion would be required to know how best to proceed.
+market research and expert opinion is required to know how best to proceed.
 
 Contracts are written in Solidity, a new language with immature tooling, testing and
 other best practices which evolve in more mature languages over time. Tokens, organizations,
@@ -100,12 +99,12 @@ steal funds), contracts need to be thoroughly tested and audited by a third part
 
 Managing cost is a concern. As a programming language, Solidity performs work. That work has
 a cost, measured in [gas](https://ethereum.stackexchange.com/questions/3/what-is-meant-by-the-term-gas).
-Think of this as transaction feeds. Contracts need to be as simple as possible to reduce costs.
-This is another area where consulation in contract design would be helpful.
+Think of this as transaction fees. Contracts need to be as simple as possible to reduce costs.
+This is another area where consultation in contract design would be helpful.
 
 Managing wallets, contracts, etc. feels like overhead best shipped to an e-2-e platform.
 Manually deploying and managing contracts is a way to get started, but it feels klunky.
-If a platform could manage all of these things for you, you could focus on your business
+Ideally, a platform would manage all of these things for you so you could focus on your business
 vs being distracted by the underlying technology.
 
 The sensitivity of the wallet and associated account is a security concern. No different
@@ -117,3 +116,7 @@ than a bank or investment account, but these must be carefully guarded.
 - https://cobinhood.com
 - https://www.coinbase.com
 - https://www.forbes.com/sites/michaeldelcastillo/2018/10/15/fidelity-launches-institutional-platform-for-bitcoin-and-ethereum
+- https://medium.com/coinfi/how-to-create-your-ethereum-address-323d176e5aab
+- https://medium.com/smarttaylor/heres-how-to-create-your-ethereum-wallet-fa975b26b9fe
+- https://medium.com/@trustwallet/ethereum-tokens-how-acquire-store-and-trade-them-f8cd191fc841
+- https://etherscan.io/tokens

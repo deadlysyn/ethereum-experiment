@@ -29,22 +29,25 @@ app should be enough to get started, but is just one option. There are a number 
 [ERC-20](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-20.md) (Ethereum Request for
 Comment #20) is more about [standardization](https://ethereum.stackexchange.com/questions/33956/are-there-any-other-smart-contract-standards-like-erc20) than security. As an emerging standard, it documents
 a proposed API for tokens. With everyone creating custom tokens, this helps ensure
-compatability and makes exchange easier.
+compatibility and makes exchange easier.
 
 For an [ERC-20 compliant token](https://theethereum.wiki/w/index.php/ERC20_Token_Standard),
-you can just use [token.sol](https://github.com/deadlysyn/ethereum-experiment/blob/master/token.sol) in this repository as a starting point. Deploy it with
-the wallet app (Deploy New Contract, paste Solidity code). [Detailed directions](https://www.ethereum.org/token)
-are in the docs. When you deploy the token contract you have to specify the following:
+you can just use [token.sol](https://github.com/deadlysyn/ethereum-experiment/blob/master/token.sol) in this
+repository as a starting point. Deploy it with the wallet app (Deploy New Contract, paste Solidity code).
+[Detailed directions](https://www.ethereum.org/token) are in the docs. When you deploy the token contract
+you have to specify the following:
 
 - Initial supply: How many tokens to initially create
 - Token name: The name of your token
 - Decimal units: 18 is a common default
 - Token symbol: A symbol for your token
 
-Note: "Know Your Customer" is not addressed by ERC-20. You should discuss this with an advisor.
-There are other token "standards" like [ST-20](https://polymath.network/st20.html) which attempt to
+Note: "Know Your Customer" for token purchasers is not addressed by ERC-20. You should discuss this with an advisor.
+There are other emerging token "standards" like [ST-20](https://polymath.network/st20.html) which attempt to
 solve the KYC problem. Unfortunately, [as this thread implies](https://www.reddit.com/r/ethereum/comments/7vkm3m/can_kyc_be_baked_into_security_tokens_on_ethereum),
 there are mixed views -- you will need an expert opinion on whether it is legally suitable.
+[KYC for token owners is becoming easier](https://foundico.com/kyc), simply requiring
+founders to submit to interviews and provide proof of identity.
 
 # DAO
 
@@ -65,6 +68,11 @@ Deploy the contract via the wallet app... you'll need to customize a few things:
 - Shares token address: Address of your token
 
 # Crowdsale
+
+**NOTE: The starting contract provided here needs refined to be used in production.
+As described toward the bottom of the [related documentation](https://www.ethereum.org/crowdsale),
+there is potential for hostile takeover. One solution would be ensuring when a token is bought,
+the same quantity of tokens are sent to the founder's account so that they always control 50% of the project.**
 
 Once you've issued your token and deployed an organization, you need to attract investors
 and be able to trade virtual shares in your company. You do this in Ethereum with a crowdsale contract.
@@ -103,7 +111,7 @@ Think of this as transaction fees. Contracts need to be as simple as possible to
 This is another area where consultation in contract design would be helpful.
 
 Managing wallets, contracts, etc. feels like overhead best shipped to an e-2-e platform.
-Manually deploying and managing contracts is a way to get started, but it feels klunky.
+Manually deploying and managing contracts is a way to get started, but it feels clunky.
 Ideally, a platform would manage all of these things for you so you could focus on your business
 vs being distracted by the underlying technology.
 
@@ -112,11 +120,15 @@ than a bank or investment account, but these must be carefully guarded.
 
 ## Resources
 
+- https://ethereum.org
 - https://blocktrade.com
-- https://cobinhood.com
 - https://www.coinbase.com
+- https://cobinhood.com
+- https://etherscan.io
+- https://foundico.com
+- https://www.clearify.io
+- https://www.icoalert.com
 - https://www.forbes.com/sites/michaeldelcastillo/2018/10/15/fidelity-launches-institutional-platform-for-bitcoin-and-ethereum
 - https://medium.com/coinfi/how-to-create-your-ethereum-address-323d176e5aab
 - https://medium.com/smarttaylor/heres-how-to-create-your-ethereum-wallet-fa975b26b9fe
 - https://medium.com/@trustwallet/ethereum-tokens-how-acquire-store-and-trade-them-f8cd191fc841
-- https://etherscan.io/tokens
